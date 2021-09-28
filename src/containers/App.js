@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Helmet } from "react-helmet";
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
@@ -34,6 +35,11 @@ class App extends Component {
     <h1 className="f1 tc">Loading...</h1> :
     (
       <div className="tc">
+        <div className="application">
+          <Helmet>
+            <title>Robo Friends</title>
+          </Helmet>
+        </div>
         <h1 className="f1">RoboFriends</h1>
         <SearchBox searchChange={this.onSearchChange}/>
         <Scroll>
